@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital</title>
+</head>
+<body>
+    <input type="submit" id="button11" value="button11" />
+    <input type="submit" value="button12" />
+
+    <br>
+
+    <br>
+    <form action="https://www.baidu.com/" method="get">
+        <input type="submit" value="button3"
+               name="button3" id="frm1_submit" />
+    </form>
+
+    <script>
+
+        let click = $('#button11').click(function(e) {
+            e.preventDefault();
+
+            var url = "www.google.com";
+            var data = {foo: 'bar'};
+
+            var requestObject = {"url": url, "data": data };
+            console.log(requestObject);
+            var msg = JSON.stringify(requestObject);
+
+            // ...SendMessage(JSON.stringify(requestObject))
+        });
+    </script>
+</body>
+</html>
